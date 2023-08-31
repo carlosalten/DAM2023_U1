@@ -16,9 +16,6 @@ class _EjemploBnPageState extends State<EjemploBnPage> {
   int paginaSeleccionada = 0;
   Widget pagina = TabHomePage();
   String titulo = 'Home';
-  // List paginas = [
-  //   TabHomePage(),
-  // ];
 
   @override
   Widget build(BuildContext context) {
@@ -57,28 +54,25 @@ class _EjemploBnPageState extends State<EjemploBnPage> {
           ),
         ],
         onTap: (index) {
-          // print('INDEX: $index');
-          setState(() {
-            paginaSeleccionada = index;
-            switch (paginaSeleccionada) {
-              case 0:
-                pagina = TabHomePage();
-                titulo = 'Home';
-                break;
-              case 1:
-                pagina = TabBodegaPage();
-                titulo = 'Bodega';
-                break;
-              case 2:
-                pagina = TabComprasPage();
-                titulo = 'Compras';
-                break;
-              case 3:
-                pagina = TabVentasPage();
-                titulo = 'Ventas';
-                break;
-            }
-          });
+          paginaSeleccionada = index;
+          switch (paginaSeleccionada) {
+            case 0:
+              pagina = TabHomePage();
+              titulo = 'Home';
+              break;
+            case 1:
+              pagina = TabBodegaPage();
+              titulo = 'Bodega';
+              break;
+            case 2:
+              pagina = TabComprasPage();
+              titulo = 'Compras';
+              break;
+            case 3:
+              pagina = TabVentasPage();
+              titulo = 'Ventas';
+              break;
+          }
         },
       ),
     );
